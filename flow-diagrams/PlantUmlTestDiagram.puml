@@ -1,0 +1,5 @@
+@startuml
+!theme cerulean-outline
+Alice -> Bob: Hello
+Bob --> Alice: Hi
+@enduml
