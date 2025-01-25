@@ -33,6 +33,8 @@ This repository includes a pre-commit hook to ensure `.puml` files (PlantUML dia
    ```bashs
    git commit -m "Updated diagram.puml"
 
+---
+
 ## Behavior on Errorss
 1. If the .puml file has syntax errors or unsupported constructs, the hook will stop the commit and display an error message:
     ```plaintext
@@ -41,17 +43,23 @@ This repository includes a pre-commit hook to ensure `.puml` files (PlantUML dia
     ```bash
     git commit -m "Retry with fixed diagram"
 
+---
+
 ## Setup
-1. The pre-commit hook is already included in this repository at .git/hooks/pre-commit.
-2. Ensure the script is executable by running:
+- The pre-commit hook is already included in this repository at .git/hooks/pre-commit.
+- Ensure the script is executable by running:
     ```bash
     chmod +x .git/hooks/pre-commit
+
+---
 
 ## Best Practices
 - **Always Commit `.puml` Files with `.svc`**:
 The hook ensures both files are synchronized.
 - **Validate `.puml` Files Before Committing**:
   - Use an online PlantUML editor or IDE extensions to preview and validate diagrams.
+
+---
 
 ## Troubleshooting
 
