@@ -12,7 +12,7 @@ if (Are there `.puml` files?) then (Yes)
       :Stage the `.svc` file using `git add`;
       :Keep the `.puml` file staged;
     else (No)
-      :Display error: "Failed to process [filename]";
+      :Display error: "Failed to process [filename].";
       stop
     endif
   endwhile
