@@ -1,5 +1,25 @@
 @startuml
-!theme cerulean-outline
-Alice -> Bob: Hello
-Bob --> Alice: Hi
+start
+
+:Identify staged `.puml` files using `git diff`;
+if (Are there `.puml` files?) then (Yes)
+  :Iterate through each staged `.puml` file;
+  while (More `.puml` files to process?) is (Yes)
+    :Read the content of the `.puml` file;
+    :Send the content to the PlantUML server;
+    if (Successfully generated `.svc` file?) then (Yes)
+      :Save the `.svc` file;
+      :Stage the `.svc` file using `git add`;
+      :Keep the `.puml` file staged;
+    else (No)
+      :Display error: "Failed to process [filename]";
+      stop
+    endif
+  endwhile
+else (No)
+  :Display message: "No `.puml` files found for processing.";
+endif
+
+:Exit pre-commit hook successfully;
+stop
 @enduml
