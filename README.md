@@ -55,6 +55,7 @@ The pre-commit hook will automatically:
     git commit -m "Retry with fixed diagram"
 
 ## Setup
+- Downnload plantuml.jar from https://sourceforge.net/projects/plantuml/files/plantuml.jar/download and copy to tools folder under your project folder.
 - The pre-commit hook is already included in this repository at .git/hooks/pre-commit.
 - Ensure the script is executable by running:
     ```bash
@@ -104,3 +105,9 @@ The pre-commit hook will automatically:
 - **Solution**: Ensure the hook has execute permissions:
   ```bash
   chmod +x .git/hooks/pre-commit
+
+## Contributing
+Contributions are welcome! Feel free to open a pull request or submit issues to improve the hook or documentation.
+
+## Contract
+For questions or support, please reach out to the repository maintauner `Siva.Bankapalli@yahoo.com`
