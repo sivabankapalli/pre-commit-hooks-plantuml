@@ -80,7 +80,6 @@ main() {
 
   # Exit if no files to process
   if [[ -z "$all_files" ]]; then
-    log "No .puml files found for processing."
     exit 0
   fi
 
