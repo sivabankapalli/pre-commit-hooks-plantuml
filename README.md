@@ -3,7 +3,7 @@ This repository includes a pre-commit hook that automates the generation of `.pn
 
 ## Overview
 The pre-commit hook performs the following actions:
-1. Identifies staged `.puml` files for processing.
+1. Identifies staged `.puml` files for processing and generate .png files for staged .puml files.
 2. Detects `.puml` files in the repository that do not have corresponding `.png` files.
 3. Uses the `plantuml.jar` file to generate `.png` files in the same directory as the `.puml` files.
 4. Automatically stages the generated `.png` files for commit.
