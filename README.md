@@ -13,7 +13,7 @@ This ensures that `.puml` and `.png` files remain in sync and no `.puml` files a
 ## Usage
 ### Adding the Pre-Commit Hook
 1. Ensure the `plantuml.jar` file is located in the `tools/` directory of your repository.
-2. Copy the `pre-commit` script into `.git/hooks/pre-commit`.
+2. Copy the `pre-commit-plantuml-to-png.sh` script into `.git/hooks/pre-commit`.
 3. Make the script executable:
    ```bash
    chmod +x .git/hooks/pre-commit
