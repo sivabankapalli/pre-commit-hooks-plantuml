@@ -109,5 +109,8 @@ The pre-commit hook will automatically:
 ## Contributing
 Contributions are welcome! Feel free to open a pull request or submit issues to improve the hook or documentation.
 
+## License
+This project is licensed under the [MIT License]([LICENSE](https://github.com/sivabankapalli/pre-commit-hooks-plantuml-to-png/blob/main/LICENSE)). You are free to use, modify, and distribute this project under the terms of the license.
+
 ## Contract
 For questions or support, please reach out to the repository maintauner `Siva.Bankapalli@yahoo.com`
