@@ -13,13 +13,13 @@ This ensures that `.puml` and `.png` files remain in sync and no `.puml` files a
 ## Usage
 ### Adding the Pre-Commit Hook
 1. Ensure the `plantuml.jar` file is located in the `tools/` directory of your repository.
-2. Copy the `pre-commit-plantuml-to-png.sh` script into `.git/hooks/pre-commit`.
+2. Copy the `pre-commit-plantuml-to-png.sh` script into `.git/hooks/pre-commit-plantuml-to-png`.
 3. Make the script executable:
    ```bash
-   chmod +x .git/hooks/pre-commit
+   chmod +x .git/hooks/pre-commit-plantuml-to-png
 
 ## Generating Diagrams
-The pre-commit hook will automatically:
+The pre-commit-plantuml-to-png hook will automatically:
 - Generate `.png` files for staged `.puml` files.
 - Detect existing `.puml` files in the repository without corresponding `.png` files and generate the missing diagrams.
 
@@ -37,8 +37,10 @@ The pre-commit hook will automatically:
  - The hook will:
    - Generate `example-diagram.png` in the same directory.
    - Add `example-diagram.png` to the commit.
+
 2. **Handling Missing `.png` Files**
  - If a `.puml` file exists without a `.png` file, the hook will detect it during the next commit and generate the missing `.png` file automatically.
+
 3. **Updating an Existing `.puml` File**
  - Modify the content of a .puml file, stage it, and commit:
    ```bash
@@ -56,10 +58,10 @@ The pre-commit hook will automatically:
 
 ## Setup
 - Downnload plantuml.jar from https://sourceforge.net/projects/plantuml/files/plantuml.jar/download and copy to tools folder under your project folder.
-- The pre-commit hook is already included in this repository at .git/hooks/pre-commit.
+- The pre-commit-plantuml-to-png hook is already included in this repository at .git/hooks/pre-commit-plantuml-to-png.
 - Ensure the script is executable by running:
     ```bash
-    chmod +x .git/hooks/pre-commit
+    chmod +x .git/hooks/pre-commit-plantuml-to-png
 
 ## Dependencies
 **Required Files**
@@ -104,7 +106,7 @@ The pre-commit hook will automatically:
 - **Cause**: Hook might not be executable.
 - **Solution**: Ensure the hook has execute permissions:
   ```bash
-  chmod +x .git/hooks/pre-commit
+  chmod +x .git/hooks/pre-commit-plantuml-to-png
 
 ## Contributing
 Contributions are welcome! Feel free to open a pull request or submit issues to improve the hook or documentation.
